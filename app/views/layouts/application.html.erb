@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>
-  	<% if content_for?(:title) %>
-  		<%= yield(:title) %>
-  	<% else %>
-  		Course
-  	<% end %>
-  </title>
+  <title>PBLTrainingVn</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -15,10 +9,6 @@
 <body>
 
 <%= yield %>
-<% flash.each do |key, value| %>
-	<div class='flash' id='<%= key %>'>
-		<%= value %>
-	</div>
-<% end %>
+
 </body>
 </html>

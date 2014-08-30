@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'courses/show'
+
+  get 'courses/index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -55,6 +59,4 @@ Rails.application.routes.draw do
   #   end
   root "courses#index"
   resources :courses
-  resources :students
-  resources :students_courses
 end
