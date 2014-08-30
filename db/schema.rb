@@ -11,11 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 1) do
+ActiveRecord::Schema.define(version: 0) do
 
-  create_table "tbl_students", force: true do |t|
-    t.string "studentID", limit: 8,   null: false
-    t.string "name",      limit: 125, null: false
+  create_table "courses", force: true do |t|
+    t.string "name", limit: 128
+    t.string "code", limit: 128, null: false
+  end
+
+  create_table "students", force: true do |t|
+    t.string  "name"
+    t.string  "picture"
+    t.integer "age"
+  end
+
+  create_table "students_courses", force: true do |t|
+    t.integer "student_id"
+    t.integer "course_id"
   end
 
 end

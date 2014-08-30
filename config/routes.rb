@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'students/index'
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -55,4 +53,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  root "courses#index"
+  resources :courses
+  resources :students
+  resources :students_courses
 end
