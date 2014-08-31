@@ -1,8 +1,31 @@
-<h1>Courses</h1>
-<% @courses.each do |course| %>
-	<ul>
-		<li><%= course.id %></li>
-		<li><%= course.name %></li>
-		<li><%= course.code %></li>
-	</ul>
-<% end %>
+<script type="text/javascript">
+  function UserController($scope, $http) {
+    $http.get('http://localhost:3000/courses.json').success(function(data) {
+      $scope.users = data;
+      console.log(data);
+    });
+  }
+</script>
+<h1><center>Courses</center></h1>
+<div class="container-fluid" ng-controller="UserController">
+  <div class="container">
+    <table class="table table-bordered" >
+      <thead>
+        <tr>
+          <th>ID Course</th>
+          <th>Course's Name</th>
+          <th>Course's Code</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="user in users">
+          <td>{{user.course.id}}</td>
+          <td>{{user.course.name}}</td>
+          <td>{{user.course.code}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+

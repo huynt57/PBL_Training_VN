@@ -119,6 +119,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
+  minitest (~> 5.4.1)
   mysql2
   rabl
   rails (= 4.1.1)
