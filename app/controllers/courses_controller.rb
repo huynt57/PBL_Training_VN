@@ -8,5 +8,7 @@ class CoursesController < ApplicationController
   	render :text =>@course.to_json
   end
   
-  
+  def editCourse
+    
+  end
 end
