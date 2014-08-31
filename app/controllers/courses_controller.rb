@@ -7,4 +7,6 @@ class CoursesController < ApplicationController
   	@course = Course.find(params[:id])
   	render :text =>@course.to_json
   end
+  
+  
 end
