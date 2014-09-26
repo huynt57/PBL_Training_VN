@@ -8,7 +8,10 @@ class CoursesController < ApplicationController
   	render :text =>@course.to_json
   end
   
-  def editCourse
-    
+  def destroy
+    @course = Course.find(params[:id])
+  	@course.destroy
+  	
+  	redirect_to courses_path
   end
 end
