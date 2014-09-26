@@ -57,7 +57,7 @@
                                                             <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
                                                         </div>
                                                     </div>
-                                                </div
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -65,10 +65,17 @@
                             </div>
                         </div>
                         </div>
-                        <a data-toggle="modal" data-target="#edit-{{course.course.id}}" style="padding-left: 5px; padding-right: 5px;">
-                            <i class="glyphicon glyphicon-pencil"></i>
+
+
+                        <a style="padding-left: 5px; padding-right: 5px;">
+                            <%= link_to '<i class="glyphicon glyphicon-pencil"></i>'.html_safe, edit_course_path(course) %>
+                            
                         </a>
                         
+                        
+                        </div>
+
+
                         <%= link_to '<i class="glyphicon glyphicon-trash" ></i>'.html_safe,
                             course,
                             method: :delete,
@@ -81,7 +88,9 @@
         <% end %>
       </tbody>
     </table>
-
+    <%= link_to '<button type="button" class="btn btn-default">
+                  <span class="glyphicon glyphicon-plus"></span> New Course
+                </button>'.html_safe, new_course_path %>
   </div>
 </div>
 
